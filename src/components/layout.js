@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import { Seo } from './seo.js';
+import "../styles/global.css";
+import { header, content, headerWrapper } from "../styles/layout.module.css";
 
 export default function Layout ({
     children, 
@@ -24,13 +26,15 @@ export default function Layout ({
     return (
         <>  
             <Seo title={title} description={description} image={image} path={path} />
-            <header>
-                <Link to="/">{meta.title}</Link>
-                <nav>
-                    <Link to="/about">About</Link>
-                </nav>
+            <header className={header} >
+                <div className={headerWrapper}>
+                    <Link to="/">{meta.title}</Link>
+                    <nav>
+                        <Link to="/about">About</Link>
+                    </nav>
+                </div>
             </header>
-            <main>
+            <main className={content} >
                 {children}
             </main>
         </>

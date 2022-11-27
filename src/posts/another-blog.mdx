@@ -4,6 +4,21 @@ title: Second blog
 description: This is my second blog post.
 ---
 
+import { graphql } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+
+export const query = graphql`
+    query smashburgerQuery {
+        file(name: {eq: "smashburger"}) {
+            childImageSharp {
+                gatsbyImageData(placeholder: DOMINANT_COLOR)
+            }
+        }
+    }
+`;
+
 # Oh Dang
+
+<GatsbyImage image={getImage(props.data.file)} alt="Tasty hamburger on a plate with french fries in the foreground from smashburgerQuery" />
 
 This blog is even better than the last one.

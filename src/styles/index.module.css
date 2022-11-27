@@ -1,0 +1,9 @@
+.image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.image-wrapper [data-gatsby-image-wrapper] {
+
+}

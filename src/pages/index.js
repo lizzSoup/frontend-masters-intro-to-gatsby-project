@@ -1,16 +1,18 @@
 import * as React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
 import Hero from '../components/hero';
+
+import {imageWrapper} from '../styles/index.module.css';
 
 
 export default function Index () {
     const data = useStaticQuery(graphql`
         query getBlogPosts {
-            allMdx(sort: {fields: frontmatter___date, order: DESC}) {
+            allMdx(sort: {frontmatter: {date: DESC}}) {
                     nodes {
                         id
-                        slug
                         frontmatter {
                             title
                             date
@@ -26,6 +28,9 @@ export default function Index () {
     return (
         <Layout>
             <Hero />
+            <div className={imageWrapper}>
+                <StaticImage src="../images/ivana-la-61jg6zviI7I-unsplash.jpg" alt="A corgi sitting on a bed with red paper hearts all over it. It looks unamused." placeholder="dominantColor" width={300} height={300} />
+            </div>
             <h1>Smart.Secure.Sustainable</h1>
             <p>Imagine what home could be.</p>
 
@@ -33,9 +38,9 @@ export default function Index () {
             <ul>
                 {posts.map((post) => (
                     <li key={post.id}>
-                        <Link to={post.slug}>{post.frontmatter.title}</Link> posted {post.frontmatter.date}. About: {post.frontmatter.description}
+                        <p>{post.frontmatter.title} posted {post.frontmatter.date}. About: {post.frontmatter.description}</p>
                     </li>
-                )) }
+                ))}
             </ul>
         </Layout>
     );

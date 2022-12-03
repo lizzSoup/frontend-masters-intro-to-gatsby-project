@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+ol,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.container-xl,
+.container,
+.container-xs {
+  margin: auto;
+}
+
+.container,
+.container-xs {
+  width: 95%;
+}
+
+.container-xl {
+  max-width: 1800px;
+}
+
+.container {
+  max-width: $site-width;
+}
+
+.container-xs {
+  max-width: 1000px;
+}
+
+.container-xl {
+  .container,
+  .container-xs {
+    width: 100%;
+  }
+}
+
+.container .container-xs {
+  width: 100%;
+}

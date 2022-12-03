@@ -1,0 +1,36 @@
+.header {
+  border-bottom: 1px solid $c-light-gray;
+}
+
+.header-wrapper {
+  padding: 1.8rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header a:not(.button):not(.image-wrapper) {
+  color: $c-gray;
+  display: inline-block;
+  padding: 0.5rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+.header a:not(.button):not(.image-wrapper):focus,
+.header a:not(.button):not(.image-wrapper):hover {
+  box-shadow: none;
+}
+
+.header-wrapper,
+.content {
+  margin: auto;
+  max-width: 1200px;
+}
+
+html {
+  height: 100vh;
+}
+
+#gatsby-focus-wrapper {
+  height: 100vh;
+}

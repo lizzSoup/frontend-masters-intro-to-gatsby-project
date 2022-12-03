@@ -1,0 +1,31 @@
+// Typography: Imports
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+// Typography: Variables
+$ff-primary: Georgia, 'Times New Roman', Times, serif;
+$ff-secondary: 'Open Sans', sans-serif;
+
+// Colours: Hues
+$c-primary: #144745;
+$c-primary-light: #0d6b5c;
+$c-primary-bright: #008b90;
+$c-primary-xlight: #108e8e3d;
+$c-secondary: #c7dbf4;
+$c-navy: #383d40;
+$c-peach: #f7dad0;
+$c-sale-red: #ae3625;
+
+// Colours: Neutrals
+$c-white: #ffffff;
+$c-gray-xlight: #f5f5f5;
+$c-light-gray: #dcdcda;
+$c-gray: #686058;
+$c-black: #2d2926;
+
+// Site Widths
+$site-width-xl: 1800px;
+$site-width: 1200px;
+$site-width-sm: 1000px;
+
+// Site Breakpoints
+$screen-sm: 768px;

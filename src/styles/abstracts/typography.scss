@@ -1,0 +1,88 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.8rem;
+  color: $c-gray;
+  line-height: 2.8rem;
+}
+
+body,
+button {
+  font-family: $ff-secondary;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.img-wrapper,
+.button {
+  a {
+    text-decoration: none;
+  }
+}
+
+h1,
+h2,
+h3 {
+  padding: 0 0 2rem 0;
+}
+
+h5,
+h5,
+h6 {
+  padding: 0 0 1rem 0;
+}
+
+h1,
+h2 {
+  font-family: $ff-primary;
+  color: $c-black;
+}
+
+h1 {
+  font-size: 4.6rem;
+}
+
+p {
+  padding: 0 0 1rem 0;
+}
+
+a:not(.button):not(.content-link) {
+  color: $c-primary-bright;
+  text-underline-offset: 6px;
+
+  &:hover,
+  &:focus-visible {
+    background: $c-primary-xlight;
+    color: $c-primary;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border: 3px solid gold;
+    padding: 1.5rem;
+  }
+}
+
+a.content-link {
+  text-decoration: none;
+  color: inherit;
+}

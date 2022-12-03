@@ -1,0 +1,24 @@
+.blog-post {
+  .container-xl {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .copy-wrapper {
+    padding: 4rem 0;
+  }
+
+  .img-wrapper {
+    height: 600px;
+    overflow: hidden;
+  }
+
+  .image {
+    height: 100%;
+  }
+
+  .link {
+    margin-top: 2rem;
+    display: inline-block;
+  }
+}

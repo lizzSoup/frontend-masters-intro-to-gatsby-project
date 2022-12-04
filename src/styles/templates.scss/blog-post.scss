@@ -4,6 +4,16 @@
     flex-direction: column-reverse;
   }
 
+  .reading-time,
+  .created-at {
+    font-size: 2.2rem;
+    font-weight: 700;
+  }
+
+  .reading-time::first-letter {
+    text-transform: uppercase;
+  }
+
   .copy-wrapper {
     padding: 4rem 0;
   }

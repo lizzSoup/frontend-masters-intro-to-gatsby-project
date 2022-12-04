@@ -3,7 +3,7 @@ require('dotenv').config();
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.testdomain.com',
-    title: 'ecobee Sample Project',
+    title: 'ecobee — lizz 🤓',
     description:
       'Sample project based off of frontend masters intro to gatsby course',
     image: 'https://images.pexels.com/photos/214574/pexels-photo-214574.jpeg',

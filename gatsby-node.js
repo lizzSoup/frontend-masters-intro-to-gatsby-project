@@ -9,29 +9,31 @@ exports.createPages = async function ({ actions: { createPage }, graphql }) {
           description {
             description
           }
-          cta {
-            url
-            label
-          }
-          body {
-            childMarkdownRemark {
-              html
-            }
-          }
-          path
           image {
             gatsbyImageData(
               layout: CONSTRAINED
               placeholder: DOMINANT_COLOR
               width: 1800
             )
-            title
+            description
           }
+          path
+          body {
+            childMarkdownRemark {
+              html
+            }
+          }
+          cta {
+            label
+            url
+          }
+          createdAt(formatString: "dddd MMMM Do, YYYY")
         }
       }
     }
   `);
 
+  console.log(blogPostsQuery.data.allContentfulBlogPost.nodes);
   const blogPosts = blogPostsQuery.data.allContentfulBlogPost.nodes;
 
   blogPosts.forEach((blogPost) => {

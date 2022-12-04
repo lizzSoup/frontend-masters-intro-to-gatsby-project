@@ -1,0 +1,22 @@
+a.button,
+button.button {
+  color: $c-primary;
+  background: $c-white;
+  width: fit-content;
+  min-width: 16.5rem;
+  border: 2px solid $c-primary;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: 39px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 3rem;
+  transition: all 0.1s ease-in-out 0s;
+
+  &:hover,
+  &:focus-visible {
+    background: $c-primary;
+    color: $c-white;
+  }
+}

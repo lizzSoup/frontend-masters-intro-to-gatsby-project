@@ -18,7 +18,7 @@ li {
 
 .container,
 .container-xs {
-  width: 95%;
+  width: 90%;
 }
 
 .container-xl {
@@ -30,14 +30,7 @@ li {
 }
 
 .container-xs {
-  max-width: 1000px;
-}
-
-.container-xl {
-  .container,
-  .container-xs {
-    width: 100%;
-  }
+  max-width: 900px;
 }
 
 .container .container-xs {

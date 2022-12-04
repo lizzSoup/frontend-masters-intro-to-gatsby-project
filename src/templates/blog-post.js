@@ -15,10 +15,13 @@ export default function BlogPost({ pageContext }) {
       <article className="container-xl">
         <div className="copy-wrapper container-xs">
           <h1>{pageContext.heading}</h1>
-          <h2>{readingTime(pageContext.body.childMarkdownRemark.html).text}</h2>
+          <p className="reading-time">
+            {readingTime(pageContext.body.childMarkdownRemark.html).text}
+          </p>
+          <p className="created-at">Created {pageContext.createdAt}</p>
           <RichText html={pageContext.body.childMarkdownRemark.html} />
-          <Link to="/blog" className="link">
-            &larr; Back to Blog
+          <Link to={pageContext.cta.url} className="link">
+            &larr; {pageContext.cta.label}
           </Link>
         </div>
         <div className="img-wrapper">

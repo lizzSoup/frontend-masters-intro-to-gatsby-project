@@ -24,6 +24,7 @@ p,
 li {
   margin: 0;
   padding: 0;
+  line-height: 1.2;
 }
 
 h1,
@@ -61,13 +62,17 @@ h1 {
   font-size: 4.6rem;
 }
 
+h2 {
+  font-size: 3.6rem;
+}
+
 p {
   padding: 0 0 1rem 0;
 }
 
 a:not(.button):not(.content-link) {
   color: $c-primary-bright;
-  text-underline-offset: 6px;
+  text-underline-offset: 2px;
 
   &:hover,
   &:focus-visible {
@@ -76,8 +81,7 @@ a:not(.button):not(.content-link) {
   }
 
   &:focus-visible {
-    outline: none;
-    border: 3px solid gold;
+    outline-offset: 3px;
     padding: 1.5rem;
   }
 }
@@ -85,4 +89,24 @@ a:not(.button):not(.content-link) {
 a.content-link {
   text-decoration: none;
   color: inherit;
+}
+
+.rich-text {
+  h2,
+  h3,
+  h4,
+  h5 {
+    padding-top: 1.5rem;
+  }
+
+  p {
+    padding: 1rem 0;
+    line-height: 1.3;
+  }
+
+  p img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
 }

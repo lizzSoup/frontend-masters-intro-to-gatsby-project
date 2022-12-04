@@ -6,7 +6,7 @@ import Teaser from '../components/teaser.js';
 
 export const query = graphql`
   query {
-    allContentfulBlogPost {
+    allContentfulBlogPost(sort: { createdAt: DESC }) {
       nodes {
         heading
         description {
@@ -21,6 +21,11 @@ export const query = graphql`
           description
         }
         path
+        cta {
+          label
+          url
+        }
+        isFeaturedBlog
       }
     }
   }
@@ -35,22 +40,26 @@ export default function Blog({ data }) {
       pageName="blog-landing-page"
     >
       <article className="container">
-        <h1 className="heading">Latest Posts</h1>
+        <h1 className="page-heading">Blog Posts</h1>
         <ul className="gallery">
+          <h2 className="subheading">Featured Posts</h2>
+          <h2 className="subheading">Latest Posts</h2>
           {dataNodes.map((blogPost) => {
             const image = getImage(blogPost.image);
+            const isFeatured = blogPost.isFeaturedBlog === true;
+            const teaserClass = isFeatured ? 'featured-blog teaser' : 'teaser';
             return (
-              <li className="teaser">
-                <Teaser
-                  path={blogPost.path}
-                  gatsbyImage={image}
-                  altText={blogPost.image.description}
-                  heading={blogPost.heading}
-                  description={blogPost.description.description}
-                  // isLink={true}
-                  ctaLabel="TEST"
-                />
-              </li>
+              <Teaser
+                path={blogPost.path}
+                gatsbyImage={image}
+                altText={blogPost.image.description}
+                heading={blogPost.heading}
+                description={blogPost.description.description}
+                isLink={false}
+                ctaLabel="Read More"
+                as="li"
+                className={teaserClass}
+              />
             );
           })}
         </ul>

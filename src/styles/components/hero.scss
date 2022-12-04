@@ -92,6 +92,8 @@
 
   .button {
     margin-top: 1.5rem;
+    color: $c-black;
+    border-color: transparent;
 
     &:hover {
       color: $c-white;

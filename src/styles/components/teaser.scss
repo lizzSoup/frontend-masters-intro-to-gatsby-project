@@ -1,7 +1,97 @@
-// Teaser: Generic Styles
+// Teaser: Vertical Styles
 .teaser-contents {
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
   flex: 1;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+// Teaser: Horizontal Styles
+.horizontal {
+  background: $c-white;
+
+  .teaser-contents {
+    @media only screen and (min-width: $screen-sm) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .img-wrapper {
+    @media only screen and (min-width: $screen-sm) {
+      width: 50%;
+      aspect-ratio: 1;
+    }
+
+    .image {
+      height: 100%;
+    }
+  }
+
+  .copy-wrapper {
+    padding: 3rem 2.5rem;
+
+    @media only screen and (min-width: $screen-sm) {
+      width: 50%;
+      padding: 0 0 0 3rem;
+      align-items: center;
+      display: flex;
+      flex-flow: wrap;
+    }
+
+    @media only screen and (min-width: $screen-md) {
+      padding: 0 5rem;
+    }
+  }
+
+  .copy {
+    width: 100%;
+    height: fit-content;
+  }
+}
+
+// Teaser Secondary + Tertiary Styles
+.teaser.secondary,
+.teaser.tertiary {
+  color: $c-black;
+
+  .heading {
+    color: $c-primary;
+  }
+
+  .button {
+    background: $c-primary;
+    color: $c-white;
+
+    &:hover {
+      background-color: transparent;
+      color: $c-primary;
+    }
+  }
+}
+
+// Secondary
+.teaser.secondary {
+  background: $c-secondary;
+}
+
+// Tertiary
+.teaser.tertiary {
+  background: $c-peach;
+  color: $c-black;
+}
+
+.teaser.placeholder {
+  background: $c-green;
+  color: $c-white;
+
+  .heading {
+    color: $c-white;
+  }
 }

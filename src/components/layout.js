@@ -10,6 +10,7 @@ export default function Layout({
   image = false,
   path = false,
   pageName,
+  ...rest
 }) {
   const data = useStaticQuery(graphql`
     query getSiteTitle {
@@ -26,7 +27,7 @@ export default function Layout({
   return (
     <>
       <Seo title={title} description={description} image={image} path={path} />
-      <header className="header">
+      <header className="header" {...rest}>
         <div className="header-wrapper container">
           <Link to="/">{meta.title}</Link>
           <nav>

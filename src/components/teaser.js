@@ -29,15 +29,15 @@ export default function Teaser({
           ) : (
             <div className="description">{description}</div>
           )}
+          {!isLink && path ? <ButtonLink path={path} label={ctaLabel} /> : null}
         </div>
-        {!isLink && path ? <ButtonLink path={path} label={ctaLabel} /> : null}
       </div>
       <div className="img-wrapper">
         {gatsbyImage ? (
           <GatsbyImage image={gatsbyImage} alt={altText} className="image" />
         ) : (
           <StaticImage
-            src="../images/shiangling-RQbwjCKWxQw-unsplash.jpg"
+            src="../images/kalen-emsley-Bkci_8qcdvQ-unsplash (1).jpg"
             className="image"
           />
         )}

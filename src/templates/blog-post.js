@@ -5,9 +5,6 @@ import { Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { readingTime } from 'reading-time-estimator';
 
-//* Blog post
-//* Template for blog post page
-//*
 export default function BlogPost({ pageContext }) {
   return (
     <Layout

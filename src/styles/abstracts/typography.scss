@@ -91,6 +91,40 @@ a.content-link {
   text-decoration: none;
 }
 
+input[type='radio'] {
+  -webkit-appearance: none;
+  align-items: center;
+  appearance: none;
+  background-color: transparent;
+  border: 5px solid $c-primary;
+  box-sizing: border-box;
+  color: currentColor;
+  display: block;
+  display: flex;
+  flex: none;
+  font: inherit;
+  height: 1.8rem;
+  justify-content: center;
+  margin-right: 1.3rem;
+  position: relative;
+  width: 1.8rem;
+  top: -3px;
+}
+
+input[type='radio']::before {
+  box-shadow: inset 1em 1em $c-primary;
+  content: '';
+  height: 0.8rem;
+  position: relative;
+  transform: scale(0);
+  transition: 100ms transform ease-in-out;
+  width: 0.8rem;
+}
+
+input[type='radio']:checked::before {
+  transform: scale(1);
+}
+
 .rich-text {
   h2,
   h3,

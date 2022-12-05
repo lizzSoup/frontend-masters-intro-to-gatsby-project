@@ -1,0 +1,57 @@
+.header.dark-mode {
+  a:not(.button) {
+    color: $c-white;
+    font-family: $ff-tertiary;
+    font-weight: 200;
+  }
+
+  background: $c-black;
+  border-color: $c-gray;
+}
+
+main.dark-mode {
+  background: $c-black;
+  color: $c-white;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $c-white;
+  }
+
+  input[type='radio'] {
+    border-color: $c-dark-mode-primary;
+  }
+
+  input[type='radio']::before {
+    box-shadow: inset 1em 1em $c-dark-mode-primary;
+  }
+
+  .teaser.horizontal {
+    background-color: $c-navy;
+    color: $c-white;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 h6 {
+      color: $c-white;
+    }
+
+    .button {
+      background: transparent;
+      border-color: $c-white;
+      color: $c-white;
+
+      &:hover {
+        color: $c-navy;
+        border-color: $c-white;
+        background: $c-white;
+      }
+    }
+  }
+}

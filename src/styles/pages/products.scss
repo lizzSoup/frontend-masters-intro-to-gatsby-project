@@ -1,1 +1,32 @@
+.products {
+  height: 100%;
+  padding: 7rem 0;
+  background: $c-gray-xlight;
 
+  .container-xs {
+    padding-bottom: 5rem;
+
+    .heading {
+      font-size: 7rem;
+    }
+  }
+}
+
+.label {
+  align-items: baseline;
+  display: flex;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 2rem 0;
+}
+
+.subheading {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.products:not(.dark-mode) {
+  .label {
+    color: $c-black;
+  }
+}

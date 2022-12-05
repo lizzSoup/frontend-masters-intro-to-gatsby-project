@@ -74,7 +74,6 @@ export default function Index({ data }) {
           {sustainabilityData.teaser.map((teaser) => {
             const image = getImage(teaser.image[0]);
             const ctaLabel = teaser.cta?.label;
-            console.log(ctaLabel);
             return (
               <Teaser
                 richText={teaser.body.childMarkdownRemark.html}

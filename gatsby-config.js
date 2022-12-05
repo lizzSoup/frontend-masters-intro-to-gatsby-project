@@ -12,37 +12,6 @@ module.exports = {
     `gatsby-plugin-sass`,
     'gatsby-plugin-react-helmet',
     `gatsby-transformer-remark`,
-    //* MDX config for src plugins in src/posts
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'posts',
-        path: `${__dirname}/src/posts`,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-page-creator',
-      options: {
-        path: `${__dirname}/src/posts`,
-      },
-    },
-    'gatsby-remark-images',
-    {
-      resolve: 'gatsby-plugin-mdx',
-      options: {
-        gatsbyRemarkPlugins: [
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 1200,
-            },
-          },
-        ],
-        defaultLayouts: {
-          posts: require.resolve('./src/components/post-layout.js'),
-        },
-      },
-    },
     // * Contentful Plugin
     {
       resolve: `gatsby-source-contentful`,

@@ -30,7 +30,7 @@ export default function Layout({
         <div className="header-wrapper container">
           <Link to="/">{meta.title}</Link>
           <nav>
-            <Link to="/about">About</Link>
+            <Link to="/products">Products</Link>
             <Link to="/blog">Blog</Link>
           </nav>
         </div>

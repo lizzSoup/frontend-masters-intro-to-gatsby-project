@@ -1,6 +1,8 @@
 # ecobee project with Lizz Rennie
 
-Hello, ecopeeps! This project is built ontop of and modified from the FEM Intro to Gatsby code-along course by Jason Lengstorf.
+Hello, ecopeeps!
+
+This project is built ontop of a modified FEM Intro to Gatsby code-along course by Jason Lengstorf.
 
 ---
 
@@ -21,24 +23,17 @@ See the [workshop site](https://frontendmasters.learnwithjason.dev/intro-to-gats
 - Run `npm-run-serve`
 - View at [localhost:9000](http://localhost:9000)
 
-### Styles
-
-- This project is using [CSS modules](https://www.gatsbyjs.com/docs/how-to/styling/css-modules/)
-
 ### Plugins
 
 - React Helmet [react-helmet](https://www.npmjs.com/package/react-helmet)
-- Gatsby Plugin MDX [gatsby-plugin-mdx](https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/)
 - Gatsby Source Filesystem [gatsby-source-filesystem](https://www.gatsbyjs.com/plugins/gatsby-source-filesystem/)
 - Gatsby Plugin Page Creator
 - Gatsby Plugin Image [gatsby-plugin-image](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/)
-- Gatsby Plugin Sharp [gatsby-plugin-sharp]
-- Gatsby Transformer Sharp
-- Gatsby Remark Images
-- Gatsby Source Contentful
-- Gatsby Source Filesystem
-- Gastby Remark
-- Sass
--
+- Gatsby Plugin Sharp [gatsby-plugin-sharp](https://www.gatsbyjs.com/plugins/gatsby-plugin-sharp)
+- Gatsby Transformer Sharp [gatsby-transformer-sharp](https://www.gatsbyjs.com/plugins/gatsby-transformer-sharp/)
+- Gatsby Remark Images [gatsby-remark-image](https://www.gatsbyjs.com/plugins/gatsby-remark-images/)
+- Gatsby Source Contentful [gatsby-source-contentful](https://www.gatsbyjs.com/plugins/gatsby-source-contentful/?=gatsby%20source%20content)
+- Gatsby Source Filesystem [gatsby-source-filesystem](https://www.gatsbyjs.com/plugins/gatsby-source-filesystem/?=gatsby%20source%20filesys)
+- Sass styling [SASS](https://sass-lang.com/documentation/syntax)
 
 ### Notes

@@ -1,6 +1,12 @@
 .blog-landing-page {
   background-color: $c-gray-xlight;
-  padding: 4rem 0;
+  padding: 2rem 0;
+
+  .page-heading {
+    padding-bottom: 2 rem;
+    border-bottom: 1px solid $c-gray;
+    margin-bottom: 5rem;
+  }
 
   .gallery {
     @media screen and (min-width: $screen-sm) {
@@ -14,12 +20,8 @@
   .subheading {
     width: 100%;
 
-    &:first-of-type {
-      order: -2;
-    }
-
     &:nth-of-type(2) {
-      padding: 2rem 0;
+      padding-top: 5rem;
     }
   }
 
@@ -40,16 +42,16 @@
     }
 
     &.featured-blog {
-      order: -1;
-
-      @media screen and (min-width: $screen-sm) {
-        width: 100%;
-      }
-
-      .img-wrapper {
+      &:first-of-type {
         @media screen and (min-width: $screen-sm) {
-          aspect-ratio: 21/9;
-          overflow: hidden;
+          width: 100%;
+        }
+
+        .img-wrapper {
+          @media screen and (min-width: $screen-sm) {
+            aspect-ratio: 21/9;
+            overflow: hidden;
+          }
         }
       }
     }

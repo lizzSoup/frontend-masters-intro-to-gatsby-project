@@ -3,22 +3,26 @@
 }
 
 .header-wrapper {
-  padding: 1.8rem 0;
   display: flex;
   justify-content: space-between;
+  padding: 1.8rem 0;
 }
 
 .header a:not(.button):not(.image-wrapper) {
   color: $c-gray;
   display: inline-block;
-  padding: 0.5rem;
-  text-decoration: none;
   font-size: 1.6rem;
-}
+  padding: 0.5rem 2rem;
+  text-decoration: none;
 
-.header a:not(.button):not(.image-wrapper):focus,
-.header a:not(.button):not(.image-wrapper):hover {
-  box-shadow: none;
+  &:focus,
+  &:hover {
+    background: transparent;
+    box-shadow: none;
+    text-decoration-thickness: 6px;
+    text-decoration: underline;
+    text-underline-offset: 2.6rem;
+  }
 }
 
 .header-wrapper,

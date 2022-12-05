@@ -6,7 +6,35 @@ import Teaser from '../components/teaser.js';
 
 export const query = graphql`
   query {
-    allContentfulBlogPost(sort: { createdAt: DESC }) {
+    featured: allContentfulBlogPost(
+      filter: { isFeaturedBlog: { eq: true } }
+      sort: { createdAt: DESC }
+      limit: 4
+    ) {
+      nodes {
+        heading
+        description {
+          description
+        }
+        image {
+          gatsbyImageData(
+            layout: CONSTRAINED
+            placeholder: DOMINANT_COLOR
+            width: 1000
+          )
+          description
+        }
+        path
+        cta {
+          label
+          url
+        }
+      }
+    }
+    blogs: allContentfulBlogPost(
+      filter: { isFeaturedBlog: { eq: false } }
+      sort: { createdAt: DESC }
+    ) {
       nodes {
         heading
         description {
@@ -25,29 +53,29 @@ export const query = graphql`
           label
           url
         }
-        isFeaturedBlog
       }
     }
   }
 `;
 
 export default function Blog({ data }) {
-  const dataNodes = data.allContentfulBlogPost.nodes;
+  const featuredBlogs = data.featured.nodes;
+  const blogs = data.blogs.nodes;
+
   return (
     <Layout
       title="About This Site"
       description="More information about this site."
       pageName="blog-landing-page"
     >
-      <article className="container">
-        <h1 className="page-heading">Blog Posts</h1>
-        <ul className="gallery">
+      <article class="blog-landing-page">
+        <h1 className="page-heading container">Blog</h1>
+        <ul className="gallery container">
           <h2 className="subheading">Featured Posts</h2>
-          <h2 className="subheading">Latest Posts</h2>
-          {dataNodes.map((blogPost) => {
+
+          {/* Featured Blogs */}
+          {featuredBlogs.map((blogPost) => {
             const image = getImage(blogPost.image);
-            const isFeatured = blogPost.isFeaturedBlog === true;
-            const teaserClass = isFeatured ? 'featured-blog teaser' : 'teaser';
             return (
               <Teaser
                 path={blogPost.path}
@@ -58,7 +86,26 @@ export default function Blog({ data }) {
                 isLink={false}
                 ctaLabel="Read More"
                 as="li"
-                className={teaserClass}
+                className="featured-blog teaser"
+              />
+            );
+          })}
+
+          {/* Blogs */}
+          <h2 className="subheading">Latest Posts</h2>
+          {blogs.map((blogPost) => {
+            const image = getImage(blogPost.image);
+            return (
+              <Teaser
+                path={blogPost.path}
+                gatsbyImage={image}
+                altText={blogPost.image.description}
+                heading={blogPost.heading}
+                description={blogPost.description.description}
+                isLink={false}
+                ctaLabel="Read More"
+                as="li"
+                className="teaser"
               />
             );
           })}

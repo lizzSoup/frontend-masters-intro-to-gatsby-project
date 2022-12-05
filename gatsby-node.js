@@ -33,7 +33,6 @@ exports.createPages = async function ({ actions: { createPage }, graphql }) {
     }
   `);
 
-  console.log(blogPostsQuery.data.allContentfulBlogPost.nodes);
   const blogPosts = blogPostsQuery.data.allContentfulBlogPost.nodes;
 
   blogPosts.forEach((blogPost) => {

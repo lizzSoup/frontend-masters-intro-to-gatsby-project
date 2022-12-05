@@ -7,29 +7,28 @@ import RichText from './rich-text';
 
 export default function Teaser({
   gatsbyImage,
+  heading,
+  richText,
+  description,
   altText,
   path,
-  heading,
-  description,
-  richText,
-  as = 'div',
-  isLink = false,
   ctaLabel,
+  isLink = false,
+  as = 'div',
   ...rest
 }) {
   const Element = as;
+
   const teaserContents = (
     <div className="teaser-contents">
       <div className="copy-wrapper">
         <div className="copy">
           <h2 className="heading">{heading}</h2>
-          <div className="test">
-            {richText ? (
-              <RichText html={richText} />
-            ) : (
-              <div className="description">{description}</div>
-            )}
-          </div>
+          {richText ? (
+            <RichText html={richText} />
+          ) : (
+            <div className="description">{description}</div>
+          )}
         </div>
         {!isLink && path ? <ButtonLink path={path} label={ctaLabel} /> : null}
       </div>

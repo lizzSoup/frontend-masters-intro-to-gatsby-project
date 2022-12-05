@@ -38,6 +38,7 @@ export default function Products({ data }) {
   const [selection, setSelection] = useState(null);
   const teaserGroupData = data.contentfulTeaserGroup;
   const [theCurrentDate, setTheCurrentDate] = useState(null);
+  const isNightTime = theCurrentDate > 5 ? 'dark-mode' : null;
 
   useEffect(() => {
     const theDate = new Date();
@@ -48,8 +49,6 @@ export default function Products({ data }) {
     const value = e.currentTarget.value;
     setSelection(value);
   };
-
-  const isNightTime = theCurrentDate < 5 ? 'dark-mode' : null;
 
   return (
     <Layout

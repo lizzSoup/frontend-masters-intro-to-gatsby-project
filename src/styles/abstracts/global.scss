@@ -39,8 +39,19 @@ li {
 
 .show {
   display: block;
+  animation: fadeIn 750ms;
 }
 
 .hide {
-  display: none;
+  // important to override all other specifity
+  display: none !important;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -1,5 +1,5 @@
 .products {
-  height: 100%;
+  min-height: 100vh;
   padding: 7rem 0;
   background: $c-gray-xlight;
 
@@ -8,6 +8,24 @@
 
     .heading {
       font-size: 7rem;
+    }
+  }
+
+  fieldset {
+    background-color: $c-white;
+    border: 3px solid $c-black;
+    padding: 4rem 2.5rem;
+    margin-top: 2.5rem;
+
+    .button {
+      background: $c-primary;
+      color: $c-white;
+
+      &:hover,
+      &:focus-visible {
+        background: $c-gray-xlight;
+        color: $c-primary;
+      }
     }
   }
 }

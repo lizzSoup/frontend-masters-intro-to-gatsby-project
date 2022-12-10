@@ -10,10 +10,11 @@ export default function Teaser({
   heading,
   richText,
   description,
-  altText,
+  altText = '',
   path,
   ctaLabel,
   isLink = false,
+  handleClick = false,
   as = 'div',
   ...rest
 }) {
@@ -30,6 +31,11 @@ export default function Teaser({
             <div className="description">{description}</div>
           )}
           {!isLink && path ? <ButtonLink path={path} label={ctaLabel} /> : null}
+          {!isLink && !path && handleClick ? (
+            <button className="button" onClick={handleClick}>
+              {ctaLabel}
+            </button>
+          ) : null}
         </div>
       </div>
       <div className="img-wrapper">
@@ -39,6 +45,7 @@ export default function Teaser({
           <StaticImage
             src="../images/kalen-emsley-Bkci_8qcdvQ-unsplash (1).jpg"
             className="image"
+            alt="Mountain range"
           />
         )}
       </div>

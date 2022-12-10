@@ -18,13 +18,13 @@
   background: $c-white;
 
   .teaser-contents {
-    @media only screen and (min-width: $screen-sm) {
+    @media only screen and (min-width: $screen-md) {
       flex-direction: row-reverse;
     }
   }
 
   .img-wrapper {
-    @media only screen and (min-width: $screen-sm) {
+    @media only screen and (min-width: $screen-md) {
       width: 50%;
       aspect-ratio: 1;
     }
@@ -37,7 +37,7 @@
   .copy-wrapper {
     padding: 3rem 2.5rem;
 
-    @media only screen and (min-width: $screen-sm) {
+    @media only screen and (min-width: $screen-md) {
       width: 50%;
       padding: 0 0 0 3rem;
       align-items: center;

@@ -108,21 +108,27 @@ input[type='radio'] {
   margin-right: 1.3rem;
   position: relative;
   width: 1.8rem;
-  top: -3px;
 }
 
 input[type='radio']::before {
-  box-shadow: inset 1em 1em $c-primary;
   content: '';
-  height: 0.8rem;
+  height: 1.8rem;
   position: relative;
   transform: scale(0);
   transition: 100ms transform ease-in-out;
-  width: 0.8rem;
+  width: 1.8rem;
+  top: 0;
+  left: 0;
 }
 
 input[type='radio']:checked::before {
+  background: $c-primary;
   transform: scale(1);
+}
+
+ul,
+ol {
+  list-style-position: inside;
 }
 
 .rich-text {

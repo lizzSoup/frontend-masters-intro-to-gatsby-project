@@ -71,7 +71,7 @@ export default function Index({ data }) {
         className="teaser-group-of-three container"
       >
         <ul className="teaser-group-of-three__list">
-          {sustainabilityData.teaser.map((teaser) => {
+          {sustainabilityData.teaser.map((teaser, index) => {
             const image = getImage(teaser.image[0]);
             const ctaLabel = teaser.cta?.label;
             return (
@@ -80,9 +80,10 @@ export default function Index({ data }) {
                 gatsbyImage={image}
                 altText={teaser.image[0].description}
                 ctaLabel={ctaLabel ? ctaLabel : null}
-                path={teaser.cta?.url ? teaser.cta.url : null}
+                path={teaser.cta?.url ? '/' : null}
                 className="teaser-group-of-three__list-item"
                 as="li"
+                key={`teaser-${index}`}
               />
             );
           })}

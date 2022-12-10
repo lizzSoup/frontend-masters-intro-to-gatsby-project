@@ -54,4 +54,19 @@ main.dark-mode {
       }
     }
   }
+
+  fieldset {
+    background: $c-navy;
+
+    .button {
+      background: transparent;
+      border-color: $c-white;
+
+      &:hover,
+      &:focus {
+        background: $c-white;
+        color: $c-navy;
+      }
+    }
+  }
 }

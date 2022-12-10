@@ -94,4 +94,13 @@
   .heading {
     color: $c-white;
   }
+
+  .button {
+    border-color: $c-white;
+
+    &:hover,
+    &:focus-visible {
+      background: transparent;
+    }
+  }
 }

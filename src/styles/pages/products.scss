@@ -5,17 +5,23 @@
 
   .container-xs {
     padding-bottom: 5rem;
+    text-align: center;
 
     .heading {
-      font-size: 7rem;
+      font-size: 6rem;
+    }
+
+    .legend {
+      text-align: right;
     }
   }
 
   fieldset {
     background-color: $c-white;
     border: 3px solid $c-black;
-    padding: 4rem 2.5rem;
+    padding: 4rem 2.5rem 2.5rem;
     margin-top: 2.5rem;
+    text-align: left;
 
     .button {
       background: $c-primary;
@@ -23,7 +29,7 @@
 
       &:hover,
       &:focus-visible {
-        background: $c-gray-xlight;
+        background: $c-primary-xlight;
         color: $c-primary;
       }
     }

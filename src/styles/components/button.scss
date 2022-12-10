@@ -21,4 +21,10 @@ button.button {
     background: $c-primary;
     color: $c-white;
   }
+
+  &:disabled {
+    background: $c-light-gray !important;
+    border: 2px solid $c-gray;
+    color: $c-black !important;
+  }
 }

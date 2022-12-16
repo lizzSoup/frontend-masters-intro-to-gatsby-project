@@ -24,6 +24,8 @@
   }
 
   .img-wrapper {
+    width: 100%;
+
     @media only screen and (min-width: $screen-md) {
       width: 50%;
       aspect-ratio: 1;
@@ -31,6 +33,7 @@
 
     .image {
       height: 100%;
+      width: 100%;
     }
   }
 

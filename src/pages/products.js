@@ -228,7 +228,8 @@ export default function Products({ data }) {
                 onChange={handleSelectionChange}
               />
               Built-in air quality monitor alerts you when air quality is poor
-              and offer tips on how to improve it.
+              and offer tips on how to improve it. Plus the next options
+              included. included.
             </label>
             <label className="label">
               <input
@@ -239,7 +240,8 @@ export default function Products({ data }) {
                 data-question="2"
                 onChange={handleSelectionChange}
               />
-              Lite
+              Sends an alert if there is a disruption, like a sudden temperature
+              drop that could lead to frozen or burst pipes.
             </label>
             <label className="label">
               <input
@@ -250,7 +252,10 @@ export default function Products({ data }) {
                 data-question="2"
                 onChange={handleSelectionChange}
               />
-              Enhanced
+              Hardwired so you never have to worry about losing control of your
+              thermostat or replacing batteries. Stays current with the newest
+              features automatically installed through software updates with
+              dual band wifi.
             </label>
             <button
               className="button"
@@ -281,7 +286,9 @@ export default function Products({ data }) {
                 data-question="3"
                 onChange={handleSelectionChange}
               />
-              Lite
+              Works seamlessly with Apple HomeKit on all iOS devices including
+              Apple Watch, and leading smart home ecosystems including the
+              Google Assistant.
             </label>
             <label className="label">
               <input
@@ -292,7 +299,9 @@ export default function Products({ data }) {
                 data-question="3"
                 onChange={handleSelectionChange}
               />
-              Enhanced
+              The above, plus: Crystal clear touchscreen with a 50% larger
+              display, smooth waterfall edges, and radar technology for the most
+              advanced occupancy sensing ever.
             </label>
             <label className="label">
               <input
@@ -303,8 +312,9 @@ export default function Products({ data }) {
                 data-question="3"
                 onChange={handleSelectionChange}
               />
-              Get ultimate convenience like two-way talk with a built-in smart
-              speaker and your choice of Siri¹ or Alexa Built-In.
+              All of the above, including: Ultimate convenience like two-way
+              talk with a built-in smart speaker and your choice of Siri¹ or
+              Alexa Built-In.
             </label>
             <input
               className={`button`}

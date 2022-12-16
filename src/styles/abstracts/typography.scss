@@ -96,7 +96,7 @@ input[type='radio'] {
   align-items: center;
   appearance: none;
   background-color: transparent;
-  border: 5px solid $c-primary;
+  border: 5px solid $c-black;
   box-sizing: border-box;
   color: currentColor;
   display: block;
@@ -122,7 +122,7 @@ input[type='radio']::before {
 }
 
 input[type='radio']:checked::before {
-  background: $c-primary;
+  background: $c-black;
   transform: scale(1);
 }
 

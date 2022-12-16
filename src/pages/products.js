@@ -122,6 +122,7 @@ export default function Products({ data }) {
       <div className="container">
         {/*  Quiz Landing: Teaser  */}
         <Teaser
+          role="region"
           heading="Find your home's fit."
           description="Take this short quiz to discover the right ecobee thermostat for your home and family."
           altText="alt text for the image"
@@ -150,6 +151,7 @@ export default function Products({ data }) {
 
           {/* Quiz Question 1 */}
           <fieldset
+            role="region"
             className={currentQuestion === 1 ? 'show' : 'hide'}
             aria-hidden={currentQuestion === 1 ? false : true}
           >
@@ -209,6 +211,7 @@ export default function Products({ data }) {
 
           {/* Quiz Question 2 */}
           <fieldset
+            role="region"
             className={currentQuestion === 2 ? 'show' : 'hide'}
             aria-hidden={currentQuestion === 2 ? false : true}
           >
@@ -331,6 +334,7 @@ export default function Products({ data }) {
 
           return (
             <Teaser
+              role="region"
               key={teaser.heading}
               heading={`Recommended: ${teaser.heading}`}
               gatsbyImage={image}

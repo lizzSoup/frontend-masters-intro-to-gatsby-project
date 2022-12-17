@@ -1,14 +1,22 @@
 .products {
   min-height: 100vh;
-  padding: 7rem 0;
+  padding: 2.5rem 0;
   background: $c-gray-xlight;
+
+  @media only screen and (min-width: 768px) {
+    padding: 7rem 0;
+  }
 
   .container-xs {
     padding-bottom: 5rem;
     text-align: center;
 
     .heading {
-      font-size: 6rem;
+      font-size: 4rem;
+
+      @media only screen and (min-width: 768px) {
+        font-size: 6rem;
+      }
     }
 
     .legend {

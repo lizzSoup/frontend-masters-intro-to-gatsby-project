@@ -144,10 +144,6 @@ export default function Products({ data }) {
           id="quiz"
         >
           <h1 className="heading">Find your home's fit.</h1>
-          <p className="subheading">
-            Let us help you find the right ecobee thermostat for your home and
-            family.
-          </p>
 
           {/* Quiz Question 1 */}
           <fieldset

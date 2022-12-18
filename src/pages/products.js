@@ -143,17 +143,15 @@ export default function Products({ data }) {
           aria-hidden={isQuizVisible ? false : true}
           id="quiz"
         >
-          <h1 className="heading">Find your home's fit.</h1>
-
           {/* Quiz Question 1 */}
           <fieldset
             role="region"
             className={currentQuestion === 1 ? 'show' : 'hide'}
             aria-hidden={currentQuestion === 1 ? false : true}
           >
-            <h2>
+            <h1>
               <legend>Option 1.</legend>
-            </h2>
+            </h1>
             <p>
               Select one of the following options, and we'll help you find the
               right fit for your home.
@@ -211,9 +209,9 @@ export default function Products({ data }) {
             className={currentQuestion === 2 ? 'show' : 'hide'}
             aria-hidden={currentQuestion === 2 ? false : true}
           >
-            <h2>
-              <legend>Option 2.</legend>
-            </h2>
+            <h1>
+              <legend>Find your home's fit.</legend>
+            </h1>
             <label className="label">
               <input
                 type="radio"
@@ -270,9 +268,9 @@ export default function Products({ data }) {
             className={currentQuestion === 3 ? 'show' : 'hide'}
             aria-hidden={currentQuestion === 3 ? false : true}
           >
-            <h2>
-              <legend>Option 3.</legend>
-            </h2>
+            <h1>
+              <legend>Find your home's fit.</legend>
+            </h1>
             <label className="label">
               <input
                 type="radio"

@@ -150,7 +150,7 @@ export default function Products({ data }) {
             aria-hidden={currentQuestion === 1 ? false : true}
           >
             <h1>
-              <legend>Option 1.</legend>
+              <legend>Find your home's fit.</legend>
             </h1>
             <p>
               Select one of the following options, and we'll help you find the
